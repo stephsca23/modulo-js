@@ -80,6 +80,111 @@
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"> Ventajas / Desventajas</button>
          
             <button type="button" class="btn btn-secondary"> Cotizar</button>
+
+
+           
+
+    <style>
+      #modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.9);
+      }
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 50%;
+        max-width: 500px;     
+      }
+
+     
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      </style>
+
+
+    <div id="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-image" />
+      <input type= "text" id="n1" placeholder="Ancho">
+    <input type= "text" id="n2" placeholder="Alto">
+    <button id="Cotizar"> Cotizar </button>
+    <output id="resultado"></output>
+
+    </div>
+    <script>
+      let modal = document.getElementById('modal')
+      let modalImage = document.getElementById ('modal-image')
+      let closeButton = document.getElementsByClassName('close')[0]
+      let button = document.getElementsByClassName('btn btn-secondary')[0]
+
+      button.addEventListener('click', function (){
+          modal.style.display = 'block'
+          
+          
+
+          modalImage.src = '/Users/daniel/Documents/JM_PAG_2/FOTOS PERSIANAS SALA/VERTICAL DE TELA.png'
+          
+          
+      })
+
+      
+
+      closeButton.addEventListener('click', function (){
+          modal.style.display = 'none'
+      })
+
+
+ 
+    </script>
+
+
+<script>
+
+       
+  document.querySelector('#Cotizar').addEventListener('click', () => {
+   const ancho = document.querySelector ('#n1').value;
+       const alto = document.querySelector ('#n2').value;
+      let precio = 3000
+      
+
+
+      
+       let r = (precio*ancho*alto)
+
+       
+
+     document.querySelector('#resultado').textContent = r;
+   
+    
+  } )
+
+
+</script>
+
+
+
          
         
             
@@ -116,7 +221,110 @@
             <h5 class="card-title">Shangri-La</h5>
             <p class="card-text">Precio $2900m2</p>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse2" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Ventajas / Desventajas</button>
-            <button type="button" class="btn btn-secondary"> Cotizar</button>
+            <button  type="button" class="btn btn-secondary2"> Cotizar</button>
+
+            <style>
+              #shang {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.9);
+              }
+              .shang-content {
+                margin: auto;
+                display: block;
+                width: 50%;
+                max-width: 500px;     
+              }
+        
+             
+              .closeShang {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+              }
+              .closeShang:hover,
+              .closeShang:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+              }
+              </style>
+        
+        
+            <div id="shang">
+              <span class="close">&times;</span>
+              <img class="shang-content" id="shang-image" />
+              <input type= "text" id="n3" placeholder="Ancho">
+            <input type= "text" id="n4" placeholder="Alto">
+            <button id="Cotizar2"> Cotizar </button>
+            <output id="resultado2"></output>
+        
+            </div>
+            <script>
+              let shang = document.getElementById('shang')
+              let shangImage = document.getElementById ('shang-image')
+              let closeShang = document.getElementsByClassName('close')[1]
+              let but = document.getElementsByClassName('btn btn-secondary2')[0]
+        
+              but.addEventListener('click', function (){
+                  shang.style.display = 'block'
+                  
+                  
+        
+                  shangImage.src = "/Users/daniel/Documents/JM_PAG_2/FOTOS PERSIANAS SALA/SHANGRI-LA.png"
+                  
+                  
+              })
+        
+              
+        
+              closeShang.addEventListener('click', function (){
+                  shang.style.display = 'none'
+              })
+        
+        
+         
+            </script>
+        
+        
+        <script>
+        
+               
+          document.querySelector('#Cotizar2').addEventListener('click', () => {
+           const ancho = document.querySelector ('#n3').value;
+               const alto = document.querySelector ('#n4').value;
+              let precio = 2900;
+              
+        
+        
+              
+               let s = (precio*ancho*alto)
+        
+               
+        
+             document.querySelector('#resultado2').textContent = s;
+           
+            
+          } )
+        
+        
+        </script>
+           
+
+
+
             <div class="row">
               <div class="col">
                 <div class="collapse multi-collapse2" id="multiCollapseExample1">
@@ -142,7 +350,108 @@
             <p class="card-text"> Precio $1200m2</p>
 
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse3" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Ventajas / Desventajas</button>
-            <button type="button" class="btn btn-secondary"> Cotizar</button>
+            <button type="button" class="btn btn-secondary3"> Cotizar</button>
+
+            
+            <style>
+              #rom {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.9);
+              }
+              .rom-content {
+                margin: auto;
+                display: block;
+                width: 50%;
+                max-width: 500px;     
+              }
+        
+             
+              .closeRom {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+              }
+              .closeRom:hover,
+              .closeRom:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+              }
+              </style>
+        
+        
+            <div id="rom">
+              <span class="close">&times;</span>
+              <img class="rom-content" id="rom-image" />
+              <input type= "text" id="n5" placeholder="Ancho">
+            <input type= "text" id="n6" placeholder="Alto">
+            <button id="Cotizar3"> Cotizar </button>
+            <output id="resultado3"></output>
+        
+            </div>
+            <script>
+              let rom = document.getElementById('rom')
+              let romImage = document.getElementById ('rom-image')
+              let closeRom = document.getElementsByClassName('close')[2]
+              let buto = document.getElementsByClassName('btn btn-secondary3')[0]
+        
+              buto.addEventListener('click', function (){
+                  rom.style.display = 'block'
+                  
+                  
+        
+                  romImage.src = "/Users/daniel/Documents/JM_PAG_2/FOTOS PERSIANAS SALA/ROMANAS.png"
+                  
+                  
+              })
+        
+              
+        
+              closeRom.addEventListener('click', function (){
+                  rom.style.display = 'none'
+              })
+        
+        
+         
+            </script>
+        
+        
+        <script>
+        
+               
+          document.querySelector('#Cotizar3').addEventListener('click', () => {
+           const ancho = document.querySelector ('#n5').value;
+               const alto = document.querySelector ('#n6').value;
+              let precio = 1200;
+              
+        
+        
+              
+               let o = (precio*ancho*alto)
+        
+               
+        
+             document.querySelector('#resultado3').textContent = o;
+           
+            
+          } )
+        
+        
+        </script>
+           
 
 
             <div class="row">
@@ -175,7 +484,107 @@
             <p class="card-text"> Precio $890m2</p>
 
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse4" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Ventajas / Desventajas</button>
-            <button type="button" class="btn btn-secondary"> Cotizar</button>
+            <button type="button" class="btn btn-secondary4"> Cotizar</button>
+
+
+            <style>
+              #hor {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.9);
+              }
+              .hor-content {
+                margin: auto;
+                display: block;
+                width: 50%;
+                max-width: 500px;     
+              }
+        
+             
+              .closeHor {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+              }
+              .closeHor:hover,
+              .closeHor:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+              }
+              </style>
+        
+        
+            <div id="hor">
+              <span class="close">&times;</span>
+              <img class="hor-content" id="hor-image" />
+              <input type= "text" id="n7" placeholder="Ancho">
+            <input type= "text" id="n8" placeholder="Alto">
+            <button id="Cotizar4"> Cotizar </button>
+            <output id="resultado4"></output>
+        
+            </div>
+            <script>
+              let hor = document.getElementById('hor')
+              let horImage = document.getElementById ('hor-image')
+              let closeHor = document.getElementsByClassName('close')[3]
+              let butt = document.getElementsByClassName('btn btn-secondary4')[0]
+        
+              butt.addEventListener('click', function (){
+                  hor.style.display = 'block'
+                  
+                  
+        
+                  horImage.src = "/Users/daniel/Documents/JM_PAG_2/FOTOS PERSIANAS SALA/ALUMINIO.png"
+                  
+                  
+              })
+        
+              
+        
+              closeHor.addEventListener('click', function (){
+                  hor.style.display = 'none'
+              })
+        
+        
+         
+            </script>
+        
+        
+        <script>
+        
+               
+          document.querySelector('#Cotizar4').addEventListener('click', () => {
+           const ancho = document.querySelector ('#n7').value;
+               const alto = document.querySelector ('#n8').value;
+              let precio = 890;
+              
+        
+        
+              
+               let h = (precio*ancho*alto)
+        
+               
+        
+             document.querySelector('#resultado4').textContent = h;
+           
+            
+          } )
+        
+        
+        </script>
        
             <div class="row">
               <div class="col">
@@ -204,7 +613,111 @@
             <p class="card-text"> Precio $690m2</p>
 
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse5" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Ventajas / Desventajas</button>
-            <button type="button" class="btn btn-secondary"> Cotizar</button>
+            <button type="button" class="btn btn-secondary5"> Cotizar</button>
+
+
+            <style>
+              #sheer {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.9);
+              }
+              .sheer-content {
+                margin: auto;
+                display: block;
+                width: 50%;
+                max-width: 500px;     
+              }
+        
+             
+              .closeSheer {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+              }
+              .closeSheer:hover,
+              .closeSheer:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+              }
+              </style>
+        
+        
+            <div id="sheer">
+              <span class="close">&times;</span>
+              <img class="sheer-content" id="sheer-image" />
+              <input type= "text" id="n9" placeholder="Ancho">
+            <input type= "text" id="n10" placeholder="Alto">
+            <button id="Cotizar5"> Cotizar </button>
+            <output id="resultado5"></output>
+        
+            </div>
+            <script>
+              let sheer = document.getElementById('sheer')
+              let sheerImage = document.getElementById ('sheer-image')
+              let closeSheer = document.getElementsByClassName('close')[4]
+              let bu = document.getElementsByClassName('btn btn-secondary5')[0]
+        
+              bu.addEventListener('click', function (){
+                  sheer.style.display = 'block'
+                  
+                  
+        
+                  sheerImage.src = "/Users/daniel/Documents/JM_PAG_2/FOTOS PERSIANAS SALA/SHEER ELEGANCE.png"
+                  
+                  
+              })
+        
+              
+        
+              closeSheer.addEventListener('click', function (){
+                  sheer.style.display = 'none'
+              })
+        
+        
+         
+            </script>
+        
+        
+        <script>
+        
+               
+          document.querySelector('#Cotizar5').addEventListener('click', () => {
+           const ancho = document.querySelector ('#n9').value;
+               const alto = document.querySelector ('#n10').value;
+              let precio = 690;
+              
+        
+        
+              
+               let she = (precio*ancho*alto)
+        
+               
+        
+             document.querySelector('#resultado5').textContent = she;
+           
+            
+          } )
+        
+        
+        </script>
+       
+
+
+
 
             <div class="row">
               <div class="col">
@@ -236,7 +749,109 @@
             <p class="card-text"> Precio $490m2</p>
 
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse6" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Ventajas / Desventajas</button>
-            <button type="button" class="btn btn-secondary"> Cotizar</button>
+            <button type="button" class="btn btn-secondary6"> Cotizar</button>
+
+
+            <style>
+              #enrr {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.9);
+              }
+              .enrr-content {
+                margin: auto;
+                display: block;
+                width: 50%;
+                max-width: 500px;     
+              }
+        
+             
+              .closeEnrr {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+              }
+              .closeEnrr:hover,
+              .closeEnrr:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+              }
+              </style>
+        
+        
+            <div id="enrr">
+              <span class="close">&times;</span>
+              <img class="enrr-content" id="enrr-image" />
+              <input type= "text" id="n11" placeholder="Ancho">
+            <input type= "text" id="n12" placeholder="Alto">
+            <button id="Cotizar6"> Cotizar </button>
+            <output id="resultado6"></output>
+        
+            </div>
+            <script>
+              let enrr = document.getElementById('enrr')
+              let enrrImage = document.getElementById ('enrr-image')
+              let closeEnrr = document.getElementsByClassName('close')[5]
+              let bo = document.getElementsByClassName('btn btn-secondary6')[0]
+        
+              bo.addEventListener('click', function (){
+                  enrr.style.display = 'block'
+                  
+                  
+        
+                  enrrImage.src = "/Users/daniel/Documents/JM_PAG_2/FOTOS PERSIANAS SALA/ENROLLABLE TANSLUCIDA.png"
+                  
+                  
+              })
+        
+              
+        
+              closeEnrr.addEventListener('click', function (){
+                  enrr.style.display = 'none'
+              })
+        
+        
+         
+            </script>
+        
+        
+        <script>
+        
+               
+          document.querySelector('#Cotizar6').addEventListener('click', () => {
+           const ancho = document.querySelector ('#n11').value;
+               const alto = document.querySelector ('#n12').value;
+              let precio = 490;
+              
+        
+        
+              
+               let enr = (precio*ancho*alto)
+        
+               
+        
+             document.querySelector('#resultado6').textContent = enr;
+           
+            
+          } )
+        
+        
+        </script>
+       
+
 
             <div class="row">
               <div class="col">
@@ -275,5 +890,17 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+ 
+    
+
+
+  </body>
+</html>
+
+
+
 </body>
+
 </html>
