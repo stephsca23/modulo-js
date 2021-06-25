@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cotiza tu persiana</title>
+</head>
+<body>
+
+<h1>Cotiza tu persiana</h1>   
+   
+    
+    <input class="ancho" type= "text" id="n1" placeholder="Ancho">
+    <input class="alto" type= "text" id="n2" placeholder="Alto">
+
+    <select id = "sala">
+
+        <option value="Vert">Vertical de tela </option>
+        <option value="Shan">Shangri La</option>
+        <option value="Rom"> Romanas</option>
+        <option value="Hor"> Horizontales Aluminio</option>
+        <option value="She"> Sheer Elegance</option>
+        <option value="Enr"> Enrollables</option>
+      
+
+
+    </select>
+    <button id="Calcular">Calcular</button>
+    <output id="costo"></output>
+    
+
+ 
+
+    <script>
+        document.querySelector ('#Calcular').addEventListener('click', () => {
+            const ancho = document.querySelector ('#n1').value;
+            const alto = document.querySelector ('#n2').value;
+            const sala = document.querySelector ('#sala').value;
+          
+           
+
+           
+
+           
+          
+            let m;
+            if (sala == "Vert") {
+                m = ancho*alto*3000
+                
+            } else if ( sala == "Shan"){
+                m = ancho*alto*2900
+             
+            } else if (sala == "Rom"){
+                m = ancho*alto*1200;
+               
+            } else if (sala =="Hor"){
+                m = ancho*alto*890;
+               
+            } else if ( sala == "She"){
+                m = ancho*alto*690;
+
+            } else if (sala == "Enr"){
+                m = ancho*alto*490
+            } 
+
+
+           
+        
+
+          
+            document.querySelector('#costo').textContent = m;
+
+
+
+           
+
+          
+          
+
+
+
+        })
+
+
+
+
+    </script>
+
+
+
+
+
+    
+
+
+</body>
+</html>
+
+
+
